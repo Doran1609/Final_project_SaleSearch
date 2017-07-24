@@ -1,5 +1,8 @@
 class CartController < ApplicationController
- def add
+ before_filter :authenticate_user!
+ 
+ 
+  def add
     # get the ID of the product
     id = params[:id]
     
@@ -25,7 +28,6 @@ class CartController < ApplicationController
     # redirect to the cart display page
     redirect_to :action => :index
   end
-  
   
   def clearCart
     # set the session variable to nil and redirect
