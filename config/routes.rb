@@ -1,10 +1,22 @@
 Rails.application.routes.draw do
   
+
+
+  get 'cart/index'
+
   get 'items/index'
   get 'items/show'
   get 'items/new'
   get 'items/edit'
   get 'items/update'
+  
+  get '/admin' => 'user#admin_login'
+  get '/logout' => 'user#logout'
+  
+  get '/cart' => 'cart#index' 
+  get '/cart/:id' => 'cart#add'
+  get '/cart/clear' => 'cart#clearCart'
+
 
    resources :companies do
     resources :items
@@ -15,6 +27,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'companies#index'
+  get 'about', to: 'site#about'
+  get 'contact', to: 'site#contact'
+  get 'track', to: 'site#track'
+  get 'companies', to: 'items#show'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
