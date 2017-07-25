@@ -38,9 +38,9 @@
 
 
 <div class="new-company-button"> 
-
-<%= link_to 'Add New Company', new_company_path %>
-
+<% if current_user.admin? %>
+    <%= link_to 'Add New Company', new_company_path %>
+<% end %>
 </div>
 
 
