@@ -4,14 +4,14 @@
 </p>
 
 <div class="articale-actions">
-  
-    <%= link_to 'Edit', edit_company_path(@company), class: "btn btn-xs btn-primary" %> 
-    <%= link_to 'Delete this company', company_path(@company), method: :delete,
-                                      data: { confirm: "Are you sure yu want to delete this company?"},
-                                      class: :"btn btn-xs btn-danger" %>
-                                    
-     <%= link_to 'Back', companies_path, class: "btn btn-xs btn-success" %>  
-     
+    <% if current_user.admin? %>
+        <%= link_to 'Edit', edit_company_path(@company), class: "btn btn-xs btn-primary" %> 
+        <%= link_to 'Delete this company', company_path(@company), method: :delete,
+                                          data: { confirm: "Are you sure yu want to delete this company?"},
+                                          class: :"btn btn-xs btn-danger" %>
+                                        
+         <%= link_to 'Back', companies_path, class: "btn btn-xs btn-success" %>  
+    <% end %>
   </div>
 </div>
 
@@ -60,9 +60,9 @@
 
     <%= link_to 'Show Items', company_items_path(@company) %> 
     
-   
-        <%= link_to 'New Item', new_company_item_path(@company) %> |
-    
+    <% if current_user.admin? %>
+        <%= link_to 'New Item', new_company_item_path(@company) %>
+    <% end %>
 </div>
 
 
