@@ -7,6 +7,12 @@ $navbar-new-bg: #000066;
 @import "bootstrap";
 
 
+.bigcontainer {
+  border: white 2px solid;
+  margin: 40px;
+  max-width: 1000px;
+}
+
 .icon {
   display: inline-block;
   width: 1em;
@@ -40,11 +46,28 @@ $navbar-new-bg: #000066;
 
 }
 
-.jumbotron {
-	background_size: cover;
-	height: 20px;
-	
+/* -------------------- LOGO ------------------- */
+.center{
+	text-align: center;
 }
+.jumbotron {
+	
+	background-color: white;
+	background-image: "assets/imagS.jpg";
+	position:relative;
+	background-repeat: no-repeat;
+	background-position: center center;
+    height: 180px;
+    padding: 8px;
+    
+} 
+
+/* -------------------- END ------------------- */
+
+
+
+
+
 
 /*.one 
 {
@@ -145,6 +168,17 @@ $navbar-new-bg: #000066;
 	font-weight: bold;
 	font-size: 1.5em;
 	text-align: center;
+	background-color: transparent;
+	color: red;
+	
+	
+}
+
+.one a:hover {
+
+	background-color: transparent;
+	color: red;
+	text-decoration:underline;
 	
 }
 
@@ -161,9 +195,51 @@ $navbar-new-bg: #000066;
 
 .buybtn {
 	border-top: 1px solid #eaeaea;
-	padding-top: 10px;
+	padding-top: -10px;
 	text-align: center;
+
 }
+
+.buybtn a:hover
+{
+	background-color: transparent;
+	color: red;
+	text-decoration:underline;
+}
+
+/*------------- menubar ----------*/
+
+.nav2{
+   width:1024px;
+   margin:20px 0 0 0;
+}
+.nav2 ul li{
+    background:black;
+    width:190px;
+    line-height:40px;
+    list-style:none;
+    display:inline-block;
+    text-align:center;
+    border-radius:5px;
+}
+.nav2 ul li a{
+    text-decoration:none;
+    color:white;
+}
+
+.nav2 a:hover
+{
+	background-color: transparent;
+	color: yellow;
+	text-decoration:underline;
+}
+.nav2 ul li:hover{
+    background:red;
+    transition:1.5s;
+}
+
+/*---------- END ---------*/
+
 
 .container
 {
@@ -179,6 +255,7 @@ $navbar-new-bg: #000066;
 
 #footer a:hover
 {
+	background-color: transparent;
 	color: yellow;
 	text-decoration:underline;
 }
