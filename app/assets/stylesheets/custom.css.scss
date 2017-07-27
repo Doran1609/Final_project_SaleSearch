@@ -1,4 +1,4 @@
-$navbar-default-bg: #EBE9E9;
+$navbar-default-bg:  #cccccc;
 
 $navbar-new-bg: #000066;
 
@@ -7,6 +7,27 @@ $navbar-new-bg: #000066;
 @import "bootstrap";
 
 
+.btn .btn-info h4{
+	font-family: arial;
+	color: white;
+}
+
+/*------------------*/
+
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }
+
+
+/*-------------------*/
 .bigcontainer {
   border: white 2px solid;
   margin: 40px;
@@ -66,48 +87,6 @@ $navbar-new-bg: #000066;
 
 
 
-
-
-
-/*.one 
-{
-  float:left;
-  word-break: break-all;
-  width: 10%;
-}
-
-.two .section
-{
-  float:left;
-  word-break: break-all;
-  width: 10%;
-}
-
-.three .section
-{
-  float:left;
-  word-break: break-all;
-  width: 10%;
-}
-
-#footer
-{
-	background: #a2a6a4;
-	width:100%;
-	overflow:hidden;
-}
-
-#footer a
-{
-	color: white;
-}
-
-#footer a:hover
-{
-	color: yellow;
-	text-decoration:underline;
-}
-*/
 
 .article-actions {
 	border-top: 1px solid #eaeaea;
@@ -207,7 +186,7 @@ $navbar-new-bg: #000066;
 	text-decoration:underline;
 }
 
-/*------------- menubar ----------*/
+/*------------- MENUBAR ----------*/
 
 .nav2{
    width:1024px;
@@ -238,60 +217,73 @@ $navbar-new-bg: #000066;
     transition:1.5s;
 }
 
-/*---------- END ---------*/
+/*------------- END MENUBAR ----------*/
 
+/*-------------FOOTER-----------------*/
 
-.container
-{
-	background: #a2a6a4;
-	width: 100%;
-	overflow: hidden;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+ul,li{
+    padding:0;
+    margin:0;
 }
-
-#footer a
-{
-	color: black;
-}
-
-#footer a:hover
-{
-	background-color: transparent;
-	color: yellow;
-	text-decoration:underline;
-}
-
-#footer .section /* space betwen each section */
-{
-	width: 275px;
-	float: left;
-	margin: 30px;
-}
-
-#footer .section h5
-{
-	font-family: arial;
-	color: black;
-	font-size: 14px;
-	/*border-bottom: 1px solid black;*/
-	padding-bottom: 10px;
-	margin-bottom: 10px;
+li{
+    list-style-type:none;
 }
 
 
 
-#footer .section ul 
-{
-	list-style-type:none;
-	margin:0;
-	padding: 0px;
-}
+footer { background-color:black; min-height:350px; font-family: 'Open Sans', sans-serif; }
+.footer-col { margin-top:50px; }
+.logofooter { margin-bottom:10px; font-size:25px; color:#fff; font-weight:700;}
 
-#footer .section ul li
-{
-	width: 200px;
-	padding:10px 0;
-	
+.footer-col p { color:#fff; font-size:12px; font-family: 'Open Sans', sans-serif; margin-bottom:15px;}
+.footer-col p i { width:20px; color:#999;}
+
+.footer-ul { list-style-type:none;  padding-left:0; margin-left:2px;}
+.footer-ul li { line-height:29px; font-size:12px;}
+.footer-ul li a { color:#a0a3a4; transition: color 0.2s linear 0s, background 0.2s linear 0s; }
+.footer-ul i { margin-right:10px;}
+.footer-ul li a:hover {transition: color 0.2s linear 0s, background 0.2s linear 0s; color:#ff670f; }
+
+ .copyright { min-height:40px; background-color:#000000;}
+ .copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0;}
+ .heading7 { font-size:21px; font-weight:700; color:#d9d6d6; margin-bottom:22px;}
+ .post p { font-size:12px; color:#FFF; line-height:20px;}
+ .post p span { display:block; color:#8f8f8f;}
+ .bottom_ul { list-style-type:none; float:right; margin-bottom:0;}
+ .bottom_ul li { float:left; line-height:40px;}
+ .bottom_ul li:after { content:"/"; color:#FFF; margin-right:8px; margin-left:8px;}
+ .bottom_ul li a { color:#FFF;  font-size:12px;}
+.social-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 7px;
+    border-radius: 50%;
 }
+ .footer-social li{
+     float:left;
+ }
+ .linked-in{
+     background-color:#007bb6;
+ }
+ .facebook{
+     background-color:#3b5998;
+ }
+ .twitter{
+     background-color:#1da1f2;
+ }
+ .google{
+     background-color:#f63e28;
+ }
+
+
+
 
 #contact ul li
 {
@@ -337,12 +329,13 @@ $navbar-new-bg: #000066;
 {
 	width: 100%;
 	height: auto;
-	background: #f2f2f2;
+	background-color: #cccccc;
 	overflow: hidden;
 }
 
+/*---------------END FOOTER------------*/
 
-/* Item Index */
+/*--------------- ITEM Index ---------------*/
 
 .img {
   float: left;
@@ -372,8 +365,9 @@ $navbar-new-bg: #000066;
 	
 }
 
+/* -------------------- END ITEM - Index ------------------- */
 
-/* -------------------- New product ------------------- */
+/* -------------------- COMPANY - NEW PRODUCT ------------------- */
 
 .field{
 	text-align: center;
@@ -384,7 +378,7 @@ $navbar-new-bg: #000066;
 }
 
 
-
+/* -------------------- END COMPANY - NEW PRODUCT ------------------- */
 
 /* -------------------- Cart ------------------- */
 .cart { /* size of the table*/

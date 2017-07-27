@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
 
   resources :profiles
-
+  get '/profiles' => 'profiles#edit'
+  
+  
   devise_for :users
   get 'cart/index'
 
@@ -11,8 +13,10 @@ Rails.application.routes.draw do
   get 'items/show'
   get 'items/new'
   get 'items/edit'
+  get '/admin' => 'site#admin'
   get 'items/update'
   
+ 
   get '/admin' => 'user#admin_login'
   get '/logout' => 'user#logout'
   
@@ -34,6 +38,7 @@ Rails.application.routes.draw do
   get 'about', to: 'site#about'
   get 'contact', to: 'site#contact'
   get 'track', to: 'site#track'
+   get 'adminpage', to: 'site#adminpage'
   get 'companies', to: 'items#show'
 
   # Example of regular route:
