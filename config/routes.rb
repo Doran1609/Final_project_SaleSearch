@@ -38,7 +38,7 @@ Rails.application.routes.draw do
   get 'about', to: 'site#about'
   get 'contact', to: 'site#contact'
   get 'track', to: 'site#track'
-   get 'adminpage', to: 'site#adminpage'
+  get 'adminpage', to: 'site#adminpage'
   get 'companies', to: 'items#show'
 
   # Example of regular route:
