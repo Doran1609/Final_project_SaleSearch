@@ -45,14 +45,22 @@
     </tr>
 </table>
 
- <%= link_to 'continue buying', :controller => :companies %>
- <%= link_to 'Back to the Items company', @company %>
+
+<br>
+ <%= link_to 'Continue buying', :controller => :companies %> | 
+ <%= link_to 'Back to Items', @company %> |
+ 
+ <a href="/mybookings">Reserve it</a>
+ 
+  <!--<a href="/mybookings" class="btn btn-success btn-lg btn-block" role="button">Reserve it</a>-->
+
+
 
 
 <div>
-
-<a href="#" data-toggle="modal" data-target="#login-modal">Chek out</a>
-
+<br>
+<a href="#" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#login-modal">Buy</a>
+<br>
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     	  <div class="container">
     <div class="row">
@@ -108,7 +116,7 @@
                 </li>
             </ul>
             <br/>
-            <a href="/profile" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
+            <a href="/order" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
         </div>
         <p><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></p>
     </div>

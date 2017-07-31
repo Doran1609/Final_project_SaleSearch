@@ -18,6 +18,8 @@
         </td>
           
          <a href="/cart/<%= @item.id %>">Add to Cart</a>
+         
+          <%= link_to "reserve now", mybookings_path(@item.id) %>
    
 <tr><td colspan="2">
     <hr/>    

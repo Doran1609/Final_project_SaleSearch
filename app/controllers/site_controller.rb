@@ -18,4 +18,20 @@ class SiteController < ApplicationController
     # @admin=admin.all
     # @carts=Cart.all
   end
+  
+  def order
+    if session[:cart] then
+      @cart = session[:cart]
+    else
+      @cart = {}
+    end
+  end
+    
+  def mybookings
+    if session[:cart] then
+      @cart = session[:cart]
+    else
+      @cart = {}
+    end
+  end
 end

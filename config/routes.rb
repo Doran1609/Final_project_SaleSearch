@@ -37,6 +37,8 @@ Rails.application.routes.draw do
   root 'companies#index'
   get 'about', to: 'site#about'
   get 'contact', to: 'site#contact'
+  get 'order', to: 'site#order'
+  get 'mybookings', to: 'site#mybookings'
   get 'track', to: 'site#track'
   get 'adminpage', to: 'site#adminpage'
   get 'companies', to: 'items#show'

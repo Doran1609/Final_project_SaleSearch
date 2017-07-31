@@ -1,0 +1,40 @@
+<div class="main">
+    <h1 Align="center">Your order has been placed</h1> <br> <br>
+    
+    
+    <h3> Thanks for buying througt SaleSearch</h3>
+</div>
+
+<h1></h1>
+
+
+
+<% @cart.each do | id, quantity | %>
+    <% item = Item.find_by_id(id) %>
+    
+<div>
+    
+    <div class="container">
+        <div class="well">
+            <div class="media">
+                <a class="pull-left" href="#">
+           		<img class="media-object" <%= link_to (image_tag item.image, :style => "height:80px") %>
+          		</a>
+      		<div class="media-body">
+        		<h4 class="media-heading"><%= link_to item.name %></h4>
+                  
+                <p> <br> <%= item.description %>
+                <br>    <%= item.price %>  </p>
+               
+            </div>
+           </div>
+        </div>
+       
+    </div>
+</div>
+ 
+ 
+ <% end %>
+
+
+<%= link_to 'continue buying', :controller => :companies %>

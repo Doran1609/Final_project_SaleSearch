@@ -1,0 +1,34 @@
+
+<h3 Align="center"> Your items will be hold just for 24 hours </h3>
+
+
+
+<% @cart.each do | id, quantity | %>
+    <% item = Item.find_by_id(id) %>
+    
+<div>
+    
+    <div class="container">
+        <div class="well">
+            <div class="media">
+                <a class="pull-left" href="#">
+           		<img class="media-object" <%= link_to (image_tag item.image, :style => "height:80px") %>
+          		</a>
+      		<div class="media-body">
+        		<h4 class="media-heading"><%= link_to item.name %></h4>
+                  
+                <p> <br> <%= item.description %>
+                <br>    <%= item.price %>  </p>
+               
+            </div>
+           </div>
+        </div>
+       
+    </div>
+</div>
+ 
+ 
+ <% end %>
+
+
+<%= link_to 'continue buying', :controller => :companies %>
