@@ -35,7 +35,7 @@ class ItemsController < ApplicationController
     # Populate an item associate with company 1 with form data
     # Company will be associated with the Item
     # @item = @company.items.build(params.require(:item).permit!)
-    @item = @company.items.build(params.require(:item).permit(:name, :image, :description, :price, :category, :specification))
+    @item = @company.items.build(params.require(:item).permit(:name, :image, :description, :price, :category, :specificacio))
       if @item.save
         # Save the item successfully
         redirect_to company_item_url(@company, @item)
@@ -57,7 +57,7 @@ class ItemsController < ApplicationController
   def update
     @company = Company.find(params[:company_id])
     @item = Item.find(params[:id])
-    if @item.update_attributes(params.require(:item).permit(:name, :specification, :category, :price))
+    if @item.update_attributes(params.require(:item).permit(:name, :image, :description, :price, :category, :specificacio))
     # Save the review successfully
     redirect_to company_item_url(@company, @item)
     else
