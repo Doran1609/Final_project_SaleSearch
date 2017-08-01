@@ -39,8 +39,8 @@
 
 <div class="new-company-button"> 
 <% if current_user.admin? %>
-    <%= link_to 'Add New Company', new_company_path %>
-     <%= link_to 'Just for User', profiles_path %>
+    <%= link_to 'Add New Company', new_company_path %> | 
+     <%= link_to 'Your Users', profiles_path %>
        
 <% end %>
 </div>

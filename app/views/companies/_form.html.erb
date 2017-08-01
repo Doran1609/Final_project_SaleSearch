@@ -1,6 +1,26 @@
-
-      
-
+<% if @company.errors.any? %>
+<div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h2 class="panel-title">
+              <%= pluralize(@company.errors.count, "error") %> 
+              Prohibited this product from being saved:
+              </h2>
+              <div class="panel-body">
+                <ul>
+                  <% @company.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                  <% end %>
+                  </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+</div>
+<% end %>
+<br>
+<br>
 <div class='row'>
   <div class="col-xs-12">
     <%= form_for(@company, :html => {class: "form-horizontal", role: "form"}) do |f| %>
@@ -42,5 +62,7 @@
           </div>
         </div>
     <% end %>
+    
+
 
  

@@ -24,7 +24,7 @@
         		<h4 class="media-heading"><%= link_to item.name %></h4>
                   
                 <p> <br> <%= item.description %>
-                <br>    <%= item.price %>  </p>
+                <br>    <%= number_to_currency(item.price, :unit => "€" ) %>  </p>
                
             </div>
            </div>

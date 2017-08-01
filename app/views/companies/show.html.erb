@@ -58,7 +58,7 @@
 <div class="new-company-button"> 
     <%= link_to 'Back to the list of companies', companies_path %> |
 
-    <%= link_to 'Show Items', company_items_path(@company) %> 
+    <%= link_to 'Show Items', company_items_path(@company) %> | 
     
     <% if current_user.admin? %>
         <%= link_to 'New Item', new_company_item_path(@company) %>

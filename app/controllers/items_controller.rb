@@ -8,13 +8,6 @@ class ItemsController < ApplicationController
     # Access all items for that company
     @items = @company.items
     
-    if params[:search]
-      @items = Item.search(params[:search]).order("created_at DESC")
-      
-    else
-      @items = Item.all.order('created_at DESC')
-    end
-    
   end
   
   
@@ -64,7 +57,7 @@ class ItemsController < ApplicationController
   def update
     @company = Company.find(params[:company_id])
     @item = Item.find(params[:id])
-    if @item.update_attributes(params.require(:item).permit(:name, :image, :description, :price, :category, :specificacio))
+    if @item.update_attributes(params.require(:item).permit(:name, :image, :description, :specificacio, :category, :price))
     # Save the review successfully
     redirect_to company_item_url(@company, @item)
     else
